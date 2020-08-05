@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Of Hanoi 2</title>
+    <link rel="stylesheet" href="public/style.css" />
+</head>
+<body>
+    <div class="gameBoard">
+        <div class="discription">
+            <div>
+                <button class="btn" id="btn">Start Game</button>
+            </div>
+            <div id="dialog">
+                <div class="wining-msg">
+                    <h4>Success!! Well Done You Won The Game</h4>
+                </div>
+                <div class="losing-msg">
+                    <h4>Game Over!! You Lose The Game. Please Try Again</h4>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="middle">
+                <div id="first-poll">
+                    <div class="poll-stick" id="pollStick"></div>
+                    <div class="poll-base" id="pollBase"></div>
+                </div>
+                <div id="second-poll">
+                    <div class="poll-stick" id="pollStick1"></div>
+                    <div class=" poll-base"id="pollBase1"></div>
+                </div>
+                <div id="third-poll">
+                    <div class="poll-stick" id="pollStick2"></div>
+                    <div class=" poll-base" id="pollBase2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="side">
+            <div>
+                <p>Move So Far</p>
+                <p id="move">0</p>
+            </div>
+            <div>
+                <p>Timer</p>
+                <div id="timer">
+                <div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="src/jquery.min.js"></script>
+<script type="text/javascript" src="src/jquery-ui.min.js"></script>
+    <script src="public/js/game.js"></script>
+</body>
+</html>

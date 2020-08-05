@@ -1,0 +1,111 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.gameBoard {
+    display: flex;
+    height: 100%;
+}
+.gameBoard > div{
+    /* background: #eee; */
+    padding: 1em;
+}
+
+/* .gameBoard > div:nth-child(odd){
+     background: #ddd; 
+}*/
+.Showw{
+    display: block !important;
+}
+.discription{
+    display: flex;
+    min-width: 240px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.btn{
+    font-size: 18px;
+    padding: 10px;
+    background-color: skyblue;
+    margin: 20px 0; 
+}
+.wining-msg{
+    width: 200px;
+    text-align: center;
+    background: green;
+    padding: 10px;
+    display: none;
+}
+.losing-msg{
+    width: 200px;
+    text-align: center;
+    background: red;
+    padding: 10px;
+    display: none;
+}
+.main{
+    display: flex;
+    flex: 3;   
+}
+
+.middle{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+.middle > div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height:300px;
+    width :200px;
+    margin-left: 100px;
+    position: relative;
+}
+
+.poll-stick{
+    height:300px;
+    width: 20px;
+    margin-bottom: 10px;
+}
+.poll-base{
+    position: absolute;
+    width: 200px;
+    height: 10px;
+}
+
+#first-poll > .poll-stick, #first-poll > .poll-base{
+    background: red;
+}
+
+#second-poll > .poll-stick,#second-poll > .poll-base{
+    background: green;
+}
+
+#third-poll > .poll-stick,#third-poll > .poll-base{
+    background: orange;
+}
+
+.dropHover{
+    background-color: #eee;
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.side > div{
+    height: 50px;
+    width: 100px;
+    margin: 30px;
+    text-align: center;
+}
+#move{
+    padding-top: 5px;
+}
