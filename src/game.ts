@@ -38,7 +38,7 @@ function addingDiskRandomly(lastPositionX: any,lastPositionY: any){
     const firstPoll  = document.getElementById('first-poll');
     const secondPoll = document.getElementById('second-poll');
     const thirdPoll  = document.getElementById('third-poll');
-    let cnt = 0;
+    let spaceGap = 0;
     colorMap = [];
     idMap = [];
     for(let i = 0; i< 3 ;i ++){
@@ -58,13 +58,13 @@ function addingDiskRandomly(lastPositionX: any,lastPositionY: any){
                 break;
             }
         }
-        const diskElement   = makeDisk(lastPositionX-cnt,lastPositionY,randColor,id);
-        const diskElement1  = makeDisk(lastPositionX-cnt,lastPositionY,randColor1,id);
-        const diskElement2  = makeDisk(lastPositionX-cnt,lastPositionY,randColor2,id);
+        const diskElement   = makeDisk(lastPositionX-spaceGap,lastPositionY,randColor,id);
+        const diskElement1  = makeDisk(lastPositionX-spaceGap,lastPositionY,randColor1,id);
+        const diskElement2  = makeDisk(lastPositionX-spaceGap,lastPositionY,randColor2,id);
         firstPoll?.appendChild(diskElement);
         secondPoll?.appendChild(diskElement1);
         thirdPoll?.appendChild(diskElement2);
-        cnt += 30;
+        spaceGap += 30;
     }
 }
 
@@ -125,6 +125,7 @@ function makeUnDraggable(last: boolean) {
         thirdPoll.draggable('enable');
     }
 }
+
 function makeDraggable(){
     const firstPoll  = $('#first-poll > div::last-child');
     const secondPoll =  $('#second-poll > div::last-child');
@@ -134,7 +135,7 @@ function makeDraggable(){
     thirdPoll.draggable();
 }
 
-
+//Dropable Functionality 
 $( function() {
     $('#first-poll').droppable({
         activate: function(event, ui){
@@ -267,7 +268,7 @@ function gameStatus(){
 
 function clockTimer(){
     $('#btn').attr('disabled','true');
-    var timeLeft = 120;
+    var timeLeft = 120; ///Timer
     var timer = setInterval(function () {
         if(gameStatus()){
             clearInterval(timer);
@@ -293,7 +294,10 @@ function clockTimer(){
     }, 1000);
 }
 
+
+//Game Start
 addingDiskRandomly(261,52);
+///Start Button
 document.getElementById('btn')?.addEventListener('click',()=>{
     $('#move').text("0");
     numberOfMoves = 0;
